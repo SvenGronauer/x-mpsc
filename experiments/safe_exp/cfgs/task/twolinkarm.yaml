@@ -1,0 +1,13 @@
+name: TwoLinkArm-v0
+config:
+  constraints:
+    - cls_name: LinearConstraint
+      kwargs:
+        obs_dim: 0
+        lower_bound: -0.5
+        upper_bound: 0.5
+    - cls_name: LinearConstraint
+      kwargs:
+        obs_dim: 1
+        lower_bound: -0.5
+        upper_bound: 0.5

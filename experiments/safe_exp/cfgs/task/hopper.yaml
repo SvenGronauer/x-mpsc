@@ -1,0 +1,8 @@
+name: SafeHopper-v4
+config:
+  constraints:
+    - cls_name: LinearConstraint
+      kwargs:
+        obs_dim: 5
+        lower_bound: -10
+        upper_bound: 2.5

@@ -1,0 +1,8 @@
+name: SimplePendulum-v0
+config:
+  constraints:
+    - cls_name: LinearConstraint
+      kwargs:
+        obs_dim: 0
+        lower_bound: 0.78539 #0.25*pi
+        upper_bound: 6.54487 #2.0833*.pi

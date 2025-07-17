@@ -1,0 +1,22 @@
+defaults:
+  - _self_
+  - algo: 
+    - safe_exp_ppo_default
+
+hydra:
+  run:
+    dir: ../../data/outputs/${task.name}/${algo.name}/${experiment.tag}/${experiment.seed}/${now:%Y-%m-%d_%H-%M-%S}/
+  job:
+    chdir: True
+
+experiment:
+  tag: runner_test
+  seed: 77
+  time: ${now:%Y-%m-%d_%H-%M-%S}
+  job_name: ${hydra:job.name}
+  output_dir: ${hydra:runtime.output_dir}
+  checkpoint_dir: ${experiment.output_dir}/checkpoints
+
+
+device: cuda
+

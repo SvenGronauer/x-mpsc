@@ -1,0 +1,13 @@
+name: SafeCartPole-v0
+config:
+  constraints:
+    - cls_name: LinearConstraint
+      kwargs:
+        obs_dim: 0
+        lower_bound: -2.4
+        upper_bound: 2.4
+    - cls_name: LinearConstraint
+      kwargs:
+        obs_dim: 2
+        lower_bound: -1.57079 # 90 * np.pi / 18
+        upper_bound: 1.57079 # 90 * np.pi / 18
